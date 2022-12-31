@@ -1,0 +1,455 @@
+<!-- 
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon/animated_favicon1.gif">
+     -->
+    <!-- <title>Sketch</title>
+    <style>
+        ul.nav {
+            top: 0;
+            position: -webkit-sticky;
+            position: sticky;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ff9900;
+          }
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            text-decoration: none;
+          }
+          li a:hover {
+            background-color: lightblue;
+          }
+          
+   </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="path/to/p5.sound.js"></script>
+
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/p5.lrc.js"></script>
+ 
+  </head>
+
+  <body>
+   
+    <ul class="nav">
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="web2.html">Market</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul> -->
+    <!-- <input type="file" id="file-upload" required /> 
+    <button id="myButton" class="float-left submit-button" >oke</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "index2.html";
+    };
+</script> -->
+    <!-- <script id ="file" >
+
+var fileUpload = document.querySelector("#file-upload");
+    
+	
+	console.log( fileUpload)
+
+  
+; -->
+
+<!-- <input id="fileupload" type="file" name="fileupload" aria-label="Search"/> 
+<button id="upload-button" onclick="uploadFile()"> Upload </button> -->
+
+<!--Ajax JavaScript File Upload Logic -->
+<!-- <script>
+async function uploadFile() {
+let formData = new FormData(); 
+formData.append("file", fileupload.files[0]);
+await fetch('/upload.php', 
+{
+  method: "POST", 
+  body: formData
+}); 
+alert('The file has been uploaded successfully.');
+}
+</script>  -->
+
+<!-- <form action="/upload.php" method="post" enctype="multipart/form-data">
+  Chọn file để upload:
+  <input type="file" name="fileupload" id="fileupload">
+  <input type="submit" value="Upload" name="submit">
+</form> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Visualizer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      h1 {
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        /* font-famliy: "Lucida Console", "Courier New", monospace; */
+        /* text-shadow: 2px 2px 5px grey; */
+      }
+      h2 {
+        font-family: Arial;
+      }
+     
+      li {
+        font-size: 125%;
+        float: left;
+        margin-left: 40px;
+      }
+      ul.nav {
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: grey;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: lightblue;
+      }
+      body {
+        font-famliy: Arial;
+      }
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 10px;
+        width: 50%;
+      }
+      th {
+        text-align: center;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      
+      .link:visited {
+        color: black;
+      }
+      .link:hover {
+        color: #ff9999;
+      }
+      .column1 {
+        float: left;
+        width: 50%;
+        padding: 15px;
+        margin-left: 50px;
+      }
+      .column2 {
+        border: 1px solid gray;
+        border-radius: 10px;
+        background-color: #ffcc99;
+        color: black;
+        padding: 10px 10px 10px 10px;
+        float: right;
+        width: 30%;
+      }
+      .sr {
+        color: coral;
+      }
+      p a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: grey;
+        border: 1px solid grey;
+
+        padding: 15px;
+        text-align: center;
+        border-radius: 20px;
+        width: 75%;
+      }
+      p a:hover {
+        color: #0099ff;
+      }
+      #buy {
+        left: 1400px;
+        animation: MoveUpDown 1s linear infinite;
+        position: fixed;
+        padding: 7px;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+      }
+      @keyframes MoveUpDown {
+        0%,
+        100% {
+          bottom: 50px;
+        }
+        50% {
+          bottom: 100px;
+        }
+      }
+      .name {
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .image {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+        margin-right: 100px;
+      }
+
+      .header {
+        margin-bottom: -30px;
+        margin-top: 0px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3-II5yRwM70XF1MtiGUrs6H4BpGUYNYHMhQ&usqp=CAU");
+        background-repeat: no-repeat;
+    
+        background-size: cover;
+        padding: 200px;
+      }
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+      .navbar-fixed-top {
+        top: -60px;
+        transition: top 800ms ease 0s;
+        position: fixed;
+        z-index: 9999;
+      }
+      .show {
+        top: 0px;
+      }
+      footer {
+        top: 50px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 60px 20px;
+        background: #336699;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      @keyframes example {
+        0% {
+          background-color: #336699;
+        }
+        25% {
+          background-color: #006699;
+        }
+        50% {
+          background-color: #0066cc;
+        }
+        100% {
+          background-color: #3366cc;
+        }
+      }
+      footer.container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .in4 {
+        color: white;
+        padding: 10px 10px;
+        margin-left: 60px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .social li {
+        list-style: none;
+      }
+      .social li a {
+        width: 40px;
+        height: 40px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        border-radius: 50%;
+      }
+      .social li a:hover {
+        background: #ff9900;
+      }
+    #Contact{
+      padding: 100px;
+    }
+    #f{
+      
+      padding:45px;
+      text-align: center;
+    }
+    #s{
+      padding: 45px;
+      text-align: center; 
+    }
+    
+    .song-upload{
+      padding: 20px;
+      background-image : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAflBMVEX///8AAADy8vJDQ0Pn5+ecnJy3t7fv7++urq4sLCzg4ODr6+tkZGT7+/uqqqr19fWUlJTb29uOjo4LCws4ODhKSkpVVVW1tbXDw8M/Pz8jIyPQ0NCjo6O9vb1cXFwxMTF9fX11dXUZGRlpaWnKysqIiIh5eXlQUFAmJiYRERHlZshCAAAEPklEQVR4nO3Z63aiPBiG4TcUC0LDxnGDgvvaTs//BOdNqFNbN7XfZ8dxzX39KYsGkjwmIagIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBfEUXXbsHtCCbzPFjU127GbUiMCRpzd+1m3ICg9mF1COsMz6YKCetMP839Nqyeebx2a/5y3bewxqa5dmv+ZondDeuOsE6YmsV/Civ/1lb9EVZX67UExfkbpp55+BhWVX1yzf1U6kkh0W0vbxtT6x4gajQAezKvsP1TlvthZane4fiVthQtkBZa9sFML9n4P2oU2rGJE/MjKjSA2bGe2MVGKrOU+2Gqvc73wyo1i+O1aEJaNu2YgczNSIa3udvomKF29XdYL9qTouP+YXcKZf1Uu5oXv2MJjoRVHlqTkn4sfRNvw+qbey2b2yy5bE9sk0qSWYljSfUNbPqUS9FI+qSHi1TWS6nnmXTGifQKCTa1lE0u00ryJvGHnUaSZSXNXZLPZlJ3Gz0MZdOWTRobTbpSvA9rYkZuV57qZaVWrDcr9bKVjyV3XdWyLqziUFhBrGcTXep1+bJZKPUmssOxr2L8LiytwjbmWepF8PlSd66OmcmgvXehh10z0hojV3nfTLV14s7Ot+3wZ7WsNHr2zozaReLZjZbS38G3Wc+Gruzcf8D2Q1grH5Z1AQz8HfI2wulOWMnRsIq24kgbGWvZgT+bu17sh9UO6SbQ5lwmrI3vlO+qG/dt/3QKuIRew3rQykeuqz0t+/Mtwtd1yJV92cbie6INTduzo+NhFbtjaP2lsNoJFxU+liz5JKxMz15oOrqwum9hdX2vfSzdD2G1ZydvYfW3YQ0PhjUU47M4Edb4VFgH16zgbaBHbn3rfzayxpcMqzILWZpHHdaSaZsHZqqHQaYNHZjKTbh27rmppeN+rc8cX7YyT7I2j4H//sQ1f+ejHOWvZdemKv0sOxRWprN3aSprXvSyQ9PwWFhD1167muSP2oYHX3FeHA1rpo+T1epS3x+6h4veKwpE6lwCXQtL/RyqXFJ9wuvqGxSllB0rtW6PQitWH95B7i9xh2Eq9j7SJTeXeCR5r3Srui+rLyui/9z0dMP0/CEsF4DoZVbvkue+ivm7Bf5oWFFtirZy65uea1uzTNxSvh9WpR+YTdqyt8K9t7zbOsRuz/lB2Egb1liGflU4tnU4xFp9OPf9hNuG5W4mwXd37RvoENrZlBaTvaRe6YAM72IJp9aOxwd28Kc3pZ1VkviHs9uUxm4vdKumy8iteve6zJxrPyzbnZyeULmZ+LLFj5v/zj6L9f3t/O8Een7b9+5FOvpsXqWhbq31LfoW59//Ug5jvs/6CsL6AsL6gkm7J3NhVUt+mT6tMCU/hZ3N8iPrVyR+eza7djNug316svL4z22cAAAAAAAAgHP8AjRaR65BHSEzAAAAAElFTkSuQmCC);
+      color: black;
+      font-weight :bold;
+      background-repeat: repeat-x;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="header" id="Home">
+     
+
+      <h1>Welcome to my website - ANMV !</h1>
+    </div>
+
+    <ul class="nav">
+      <li><a href="index2.html">Home</a></li>
+      <li><a href="#About me">About me</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+
+    <div class = "song-upload">
+    <form action="upload.php" method="post" enctype="multipart/form-data" id ="f">
+      Select image to upload:<br><br>
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="Upload Image" name="submit">
+    </form>
+      <div class = "song-upload">
+    <form action="upload.php" method="post" enctype="multipart/form-data" id ="s">
+       Select song to upload:<br><br>
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="Upload Song" name="submit">
+    </form>
+      </div>
+    <!-- <div class="ig">
+      <div class="image">
+        <a href="https://silken-octagonal-cloak.glitch.me/">
+          <img
+            src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/cosmetics-logo.jpg"
+            alt="pic about cosmetic"
+            width="700px"
+            height="400px"
+          />
+        </a>
+      </div>
+      <div class="image">
+        <a
+          target="blank_"
+          href="https://shopee.vn/?utm_campaign=&c=322&af_reengagement_window=7d&af_click_lookback=7d&utm_content=1v2HNmKnYTxnCAJWCbMaXIlq23sDrpl6aj95CIifBFTYw4jF-59909-322--&af_siteid=an_17104620000&pid=affiliates&utm_source=an_17104620000&is_retargeting=true&utm_medium=affiliates&af_sub_siteid=59909&af_viewthrough_lookback=1d&atnct1=5737c6ec2e0716f3d8a7a5c4e0de0d9a&atnct2=1v2HNmKnYTxnCAJWCbMaXIlq23sDrpl6aj95CIifBFTYw4jF"
+        >
+          <img
+            src="https://cf.shopee.vn/file/2f353581efc1e1287c0f358f882cb5db"
+            width="700px"
+            height="400px"
+          />
+        </a>
+      </div>
+    </div> -->
+    <div class="container" id="Contact" align ="center">
+      <img src ="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/160223582_429555651679385_3488557365513570634_n.jpg?stp=dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=d8FS--i1ltsAX-fUKbh&_nc_ht=scontent.fhan5-6.fna&oh=00_AT-ytgUFzCNWqPfpcNAjUeZbivKl0oSwrK51agZ-Js4oVQ&oe=63261C42">
+      <p> Hi, Mình là Hiếu, sinh viên năm 3 trường Đại học Bách khoa Hà Nội</p>
+
+    </div>
+   
+   
+    <script
+      src="https://code.jquery.com/jquery-1.12.1.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      /* -------------------------------------------------------------------------*
+       * STICKY NAVIGATION
+       * -------------------------------------------------------------------------*/
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 99) {
+          $("#nav").addClass("navbar-fixed-top");
+        }
+
+        if ($(window).scrollTop() >= 100) {
+          $("#nav").addClass("show");
+        } else {
+          $("#nav").removeClass("show navbar-fixed-top");
+        }
+      });
+    </script>
+  </body>
+  <footer>
+    <div class="container" id="Contact">
+      <p class="in4">
+        Góc trả lời<br />
+        Nếu có thắc mắc gì liên hệ mình qua những kênh sau nhá!
+      </p>
+      <ul class="social">
+        <li>
+          <a target="blank_" href="https://www.instagram.com/andy_nguyen_0509/"
+            ><img
+              style="margin: 5px"
+              src="https://cdn.glitch.com/08d1623f-a885-482b-9012-688b047686c0%2Ficonfinder_2993766_instagram_social%20media_icon_256px.png?v=1625186586299"
+              width="30"
+              height="30"
+              alt="Instagram"
+          /></a>
+        </li>
+        <li>
+          <a target="blank_" href="https://www.facebook.com/sanguine.nguyen/"
+            ><img
+              style="margin: 5px"
+              src="https://cdn.glitch.com/08d1623f-a885-482b-9012-688b047686c0%2Ficonfinder_4102573_applications_facebook_media_social_icon_256px.png?v=1625186581228"
+              width="30"
+              height="30"
+              alt="Facebook"
+          /></a>
+        </li>
+        <li>
+          <a
+            target="blank_"
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+            ><img
+              style="margin: 5px"
+              src="https://cdn.glitch.com/08d1623f-a885-482b-9012-688b047686c0%2Ficonfinder_1024880_gmail_icon_256px.png?v=1625186589855"
+              width="40"
+              height="40"
+              alt="Gmail"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</html>
